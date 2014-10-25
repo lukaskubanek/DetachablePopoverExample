@@ -735,19 +735,19 @@
                                 </buttonCell>
                                 <cells>
                                     <column>
-                                        <buttonCell type="radio" title="Left" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="ks8-SO-A33">
+                                        <buttonCell type="radio" title="Right" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="ks8-SO-A33">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <buttonCell type="radio" title="Top" imagePosition="left" alignment="left" inset="2" id="FQe-M0-Epj">
+                                        <buttonCell type="radio" title="Bottom" imagePosition="left" alignment="left" inset="2" id="FQe-M0-Epj">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <buttonCell type="radio" title="Right" imagePosition="left" alignment="left" inset="2" id="2e5-4d-HAS">
+                                        <buttonCell type="radio" title="Left" imagePosition="left" alignment="left" inset="2" id="2e5-4d-HAS">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <buttonCell type="radio" title="Bottom" imagePosition="left" alignment="left" inset="2" id="n3H-MO-bBd">
+                                        <buttonCell type="radio" title="Top" imagePosition="left" alignment="left" inset="2" id="n3H-MO-bBd">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
