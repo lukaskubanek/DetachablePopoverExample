@@ -715,13 +715,16 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cac-mV-M5P">
-                                <rect key="frame" x="231" y="13" width="75" height="32"/>
+                                <rect key="frame" x="229" y="13" width="77" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Ty0-bf-b08"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Show" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fv0-7F-0Hc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="u0d-OJ-pIN" kind="custom" identifier="DetachablePopover" customClass="CustomizablePopoverSegue" customModule="DetachablePopover" id="R2j-XJ-jNE"/>
+                                    <action selector="showOrHide:" target="XfG-lQ-9wD" id="0aW-5T-PEa"/>
                                 </connections>
                             </button>
                             <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-QX-ic8">
@@ -776,48 +779,12 @@
                     <connections>
                         <outlet property="appearanceSelection" destination="KP9-vo-dnk" id="kw8-kf-EPY"/>
                         <outlet property="positionSelection" destination="oD1-QX-ic8" id="DCe-KA-AzW"/>
+                        <outlet property="showHideButton" destination="cac-mV-M5P" id="8J3-xd-wp0"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8" y="643"/>
-        </scene>
-        <!--Popover View Controller-->
-        <scene sceneID="xWg-RU-Eoh">
-            <objects>
-                <viewController id="u0d-OJ-pIN" customClass="PopoverViewController" customModule="DetachablePopover" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="3P8-BW-Yz0">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="211"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="waL-YS-mT7">
-                                <rect key="frame" x="46" y="114" width="109" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Popover Content" id="BJU-qk-wcv">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vuH-ez-ou3">
-                                <rect key="frame" x="70" y="78" width="62" height="18"/>
-                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="P1H-f2-gJL">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="vuH-ez-ou3" secondAttribute="centerX" constant="-0.5" id="VaE-Iz-29B"/>
-                            <constraint firstItem="vuH-ez-ou3" firstAttribute="top" secondItem="waL-YS-mT7" secondAttribute="bottom" constant="20" id="bis-zA-vvd"/>
-                            <constraint firstAttribute="bottom" secondItem="vuH-ez-ou3" secondAttribute="bottom" constant="80" id="dLz-c2-kf2"/>
-                            <constraint firstItem="waL-YS-mT7" firstAttribute="top" secondItem="3P8-BW-Yz0" secondAttribute="top" constant="80" id="sfV-ez-Ihx"/>
-                            <constraint firstAttribute="centerX" secondItem="waL-YS-mT7" secondAttribute="centerX" id="xnb-vN-a8W"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="nGz-Xk-Gte" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="438" y="642.5"/>
         </scene>
     </scenes>
 </document>

@@ -12,24 +12,32 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
+    @IBOutlet weak var showHideButton: NSButton!
     
-    var currentPopover: NSPopover?
+    lazy var popover: NSPopover = {
+        let popover = NSPopover()
+        popover.behavior = .Semitransient
+        popover.delegate = self
+        return popover
+    }()
     
-    // MARK: - Storyboard Segue
+    lazy var popoverViewController: PopoverViewController = {
+        return PopoverViewController(nibName: "PopoverView", bundle: nil)!
+    }()
     
-    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DetachablePopover" {
-            let popoverSegue = segue as CustomizablePopoverSegue
-            let button = sender as NSButton
-            
-            let popover = popoverSegue.popover
-            popover.behavior = .Transient
+    // MARK: - Interface Builder Actions
+    
+    @IBAction func showOrHide(sender: NSButton) {
+        if (popover.shown) {
+            popover.performClose(sender)
+        } else {
             popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
-            popover.delegate = self
-            currentPopover = popover
+            popover.contentViewController = popoverViewController
             
-            popoverSegue.positioningView = button
-            popoverSegue.preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
+            let positioningView = sender
+            let positioningRect = NSZeroRect
+            let preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
+            popover.showRelativeToRect(positioningRect, ofView: positioningView, preferredEdge: preferredEdge)
         }
     }
     
@@ -37,6 +45,14 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     func popoverShouldDetach(popover: NSPopover) -> Bool {
         return true
+    }
+    
+    func popoverDidShow(notification: NSNotification) {
+        showHideButton.title = "Hide"
+    }
+    
+    func popoverDidClose(notification: NSNotification) {
+        showHideButton.title = "Show"
     }
     
     // MARK: - Helper Methods

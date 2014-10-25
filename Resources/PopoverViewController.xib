@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PopoverViewController" customModule="DetachablePopover" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="JnG-cl-jqe" id="xc3-HG-H8z"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="JnG-cl-jqe">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMP-vd-MCc">
+                    <rect key="frame" x="46" y="114" width="109" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Popover Content" id="ZdQ-kv-ekm">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-3P-ltX">
+                    <rect key="frame" x="70" y="78" width="62" height="18"/>
+                    <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jZ5-Kd-iXL">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="w8H-3P-ltX" firstAttribute="top" secondItem="MMP-vd-MCc" secondAttribute="bottom" constant="20" id="GnE-8o-ZJ8"/>
+                <constraint firstAttribute="centerX" secondItem="w8H-3P-ltX" secondAttribute="centerX" constant="-0.5" id="VAb-9a-bSf"/>
+                <constraint firstAttribute="centerX" secondItem="MMP-vd-MCc" secondAttribute="centerX" id="Xqd-Lo-AaM"/>
+                <constraint firstItem="MMP-vd-MCc" firstAttribute="top" secondItem="JnG-cl-jqe" secondAttribute="top" constant="80" id="oHG-OO-qQs"/>
+                <constraint firstAttribute="bottom" secondItem="w8H-3P-ltX" secondAttribute="bottom" constant="80" id="tr5-Ft-W7Z"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
