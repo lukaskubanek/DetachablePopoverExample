@@ -14,22 +14,11 @@ class CustomizablePopoverSegue: NSStoryboardSegue {
     var positioningRect: NSRect = NSZeroRect
     var preferredEdge: NSRectEdge = NSMinXEdge
     
-    var appearance: NSAppearance? {
-        get { return popover.appearance }
-        set { popover.appearance = newValue }
-    }
-    
-    var popoverDelegate: NSPopoverDelegate? {
-        get { return popover.delegate }
-        set { popover.delegate = newValue }
-    }
-    
-    private let popover = NSPopover()
+    let popover = NSPopover()
     
     override func perform() {
         assert(positioningView != nil, "The positioning view has to be set in prepareForSegue()")
         
-        popover.behavior = .Transient
         popover.contentViewController = self.destinationController as? NSViewController
         popover.showRelativeToRect(positioningRect, ofView: positioningView!, preferredEdge: preferredEdge)
     }

@@ -13,6 +13,8 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
     
+    var currentPopover: NSPopover?
+    
     // MARK: - Storyboard Segue
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -20,10 +22,14 @@ class MainViewController: NSViewController, NSPopoverDelegate {
             let popoverSegue = segue as CustomizablePopoverSegue
             let button = sender as NSButton
             
+            let popover = popoverSegue.popover
+            popover.behavior = .Transient
+            popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
+            popover.delegate = self
+            currentPopover = popover
+            
             popoverSegue.positioningView = button
-            popoverSegue.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
             popoverSegue.preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
-            popoverSegue.popoverDelegate = self
         }
     }
     
