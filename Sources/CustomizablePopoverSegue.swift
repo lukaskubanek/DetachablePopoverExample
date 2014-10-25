@@ -15,12 +15,13 @@ class CustomizablePopoverSegue: NSStoryboardSegue {
     var preferredEdge: NSRectEdge = NSMinXEdge
     
     var appearance: NSAppearance? {
-        get {
-            return popover.appearance
-        }
-        set {
-            popover.appearance = newValue
-        }
+        get { return popover.appearance }
+        set { popover.appearance = newValue }
+    }
+    
+    var popoverDelegate: NSPopoverDelegate? {
+        get { return popover.delegate }
+        set { popover.delegate = newValue }
     }
     
     private let popover = NSPopover()

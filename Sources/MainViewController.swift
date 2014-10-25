@@ -8,10 +8,12 @@
 
 import AppKit
 
-class MainViewController: NSViewController {
+class MainViewController: NSViewController, NSPopoverDelegate {
     
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
+    
+    // MARK: - Storyboard Segue
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetachablePopover" {
@@ -21,8 +23,17 @@ class MainViewController: NSViewController {
             popoverSegue.positioningView = button
             popoverSegue.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
             popoverSegue.preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
+            popoverSegue.popoverDelegate = self
         }
     }
+    
+    // MARK: - Popover Delegate
+    
+    func popoverShouldDetach(popover: NSPopover) -> Bool {
+        return true
+    }
+    
+    // MARK: - Helper Methods
     
     private func appearanceForSelectedRadioButton(radioButton: Int) -> NSAppearance {
         switch radioButton {
