@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B8F19FBF0A70066AF71 /* AppDelegate.swift */; };
+		80989B9219FBF0A70066AF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B9119FBF0A70066AF71 /* ViewController.swift */; };
+		80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9319FBF0A70066AF71 /* Images.xcassets */; };
+		80989B9719FBF0A80066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9519FBF0A80066AF71 /* Main.storyboard */; };
+		80989BA319FBF0A80066AF71 /* DetachablePopoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80989B9D19FBF0A80066AF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80989B8219FBF0A70066AF71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80989B8919FBF0A70066AF71;
+			remoteInfo = DetachablePopover;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80989B9119FBF0A70066AF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80989B9619FBF0A80066AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetachablePopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80989BA119FBF0A80066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachablePopoverTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80989B8719FBF0A70066AF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80989B9919FBF0A80066AF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80989B8119FBF0A70066AF71 = {
+			isa = PBXGroup;
+			children = (
+				80989B8C19FBF0A70066AF71 /* DetachablePopover */,
+				80989B9F19FBF0A80066AF71 /* DetachablePopoverTests */,
+				80989B8B19FBF0A70066AF71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80989B8B19FBF0A70066AF71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80989B8A19FBF0A70066AF71 /* DetachablePopover.app */,
+				80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80989B8C19FBF0A70066AF71 /* DetachablePopover */ = {
+			isa = PBXGroup;
+			children = (
+				80989B8F19FBF0A70066AF71 /* AppDelegate.swift */,
+				80989B9119FBF0A70066AF71 /* ViewController.swift */,
+				80989B9319FBF0A70066AF71 /* Images.xcassets */,
+				80989B9519FBF0A80066AF71 /* Main.storyboard */,
+				80989B8D19FBF0A70066AF71 /* Supporting Files */,
+			);
+			path = DetachablePopover;
+			sourceTree = "<group>";
+		};
+		80989B8D19FBF0A70066AF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80989B8E19FBF0A70066AF71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80989B9F19FBF0A80066AF71 /* DetachablePopoverTests */ = {
+			isa = PBXGroup;
+			children = (
+				80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */,
+				80989BA019FBF0A80066AF71 /* Supporting Files */,
+			);
+			path = DetachablePopoverTests;
+			sourceTree = "<group>";
+		};
+		80989BA019FBF0A80066AF71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80989BA119FBF0A80066AF71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80989B8919FBF0A70066AF71 /* DetachablePopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopover" */;
+			buildPhases = (
+				80989B8619FBF0A70066AF71 /* Sources */,
+				80989B8719FBF0A70066AF71 /* Frameworks */,
+				80989B8819FBF0A70066AF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DetachablePopover;
+			productName = DetachablePopover;
+			productReference = 80989B8A19FBF0A70066AF71 /* DetachablePopover.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80989B9B19FBF0A80066AF71 /* DetachablePopoverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80989BA919FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverTests" */;
+			buildPhases = (
+				80989B9819FBF0A80066AF71 /* Sources */,
+				80989B9919FBF0A80066AF71 /* Frameworks */,
+				80989B9A19FBF0A80066AF71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80989B9E19FBF0A80066AF71 /* PBXTargetDependency */,
+			);
+			name = DetachablePopoverTests;
+			productName = DetachablePopoverTests;
+			productReference = 80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80989B8219FBF0A70066AF71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lukas Kubanek";
+				TargetAttributes = {
+					80989B8919FBF0A70066AF71 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					80989B9B19FBF0A80066AF71 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 80989B8919FBF0A70066AF71;
+					};
+				};
+			};
+			buildConfigurationList = 80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopover" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80989B8119FBF0A70066AF71;
+			productRefGroup = 80989B8B19FBF0A70066AF71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80989B8919FBF0A70066AF71 /* DetachablePopover */,
+				80989B9B19FBF0A80066AF71 /* DetachablePopoverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80989B8819FBF0A70066AF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */,
+				80989B9719FBF0A80066AF71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80989B9A19FBF0A80066AF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80989B8619FBF0A70066AF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80989B9219FBF0A70066AF71 /* ViewController.swift in Sources */,
+				80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80989B9819FBF0A80066AF71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80989BA319FBF0A80066AF71 /* DetachablePopoverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80989B9E19FBF0A80066AF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80989B8919FBF0A70066AF71 /* DetachablePopover */;
+			targetProxy = 80989B9D19FBF0A80066AF71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80989B9519FBF0A80066AF71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80989B9619FBF0A80066AF71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80989BA419FBF0A80066AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80989BA519FBF0A80066AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		80989BA719FBF0A80066AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DetachablePopover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80989BA819FBF0A80066AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DetachablePopover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80989BAA19FBF0A80066AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DetachablePopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetachablePopover.app/Contents/MacOS/DetachablePopover";
+			};
+			name = Debug;
+		};
+		80989BAB19FBF0A80066AF71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DetachablePopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetachablePopover.app/Contents/MacOS/DetachablePopover";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80989BA419FBF0A80066AF71 /* Debug */,
+				80989BA519FBF0A80066AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80989BA719FBF0A80066AF71 /* Debug */,
+				80989BA819FBF0A80066AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80989BA919FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80989BAA19FBF0A80066AF71 /* Debug */,
+				80989BAB19FBF0A80066AF71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80989B8219FBF0A70066AF71 /* Project object */;
+}
