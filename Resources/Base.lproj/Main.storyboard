@@ -664,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="-7.5" y="224.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DetachablePopover" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="DetachablePopover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -675,7 +675,7 @@
                             <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KP9-vo-dnk">
                                 <rect key="frame" x="119" y="154" width="181" height="58"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                <size key="cellSize" width="181" height="18"/>
+                                <size key="cellSize" width="101" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
                                 <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="bIy-hz-cQd">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -721,13 +721,13 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="u0d-OJ-pIN" kind="popover" popoverAnchorView="cac-mV-M5P" popoverBehavior="t" preferredEdge="minX" id="R2j-XJ-jNE"/>
+                                    <segue destination="u0d-OJ-pIN" kind="custom" identifier="DetachablePopover" customClass="CustomizablePopoverSegue" customModule="DetachablePopover" id="R2j-XJ-jNE"/>
                                 </connections>
                             </button>
                             <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-QX-ic8">
                                 <rect key="frame" x="119" y="61" width="181" height="78"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                <size key="cellSize" width="181" height="18"/>
+                                <size key="cellSize" width="68" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
                                 <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Z1K-j5-GNi">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -773,15 +773,19 @@
                             <constraint firstItem="cac-mV-M5P" firstAttribute="top" secondItem="oD1-QX-ic8" secondAttribute="bottom" constant="20" id="xM2-F1-6v0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appearanceSelection" destination="KP9-vo-dnk" id="kw8-kf-EPY"/>
+                        <outlet property="positionSelection" destination="oD1-QX-ic8" id="DCe-KA-AzW"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8" y="643"/>
         </scene>
-        <!--View Controller-->
+        <!--Popover View Controller-->
         <scene sceneID="xWg-RU-Eoh">
             <objects>
-                <viewController id="u0d-OJ-pIN" sceneMemberID="viewController">
+                <viewController id="u0d-OJ-pIN" customClass="PopoverViewController" customModule="DetachablePopover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3P8-BW-Yz0">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="211"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -813,7 +817,7 @@
                 </viewController>
                 <customObject id="nGz-Xk-Gte" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="643"/>
+            <point key="canvasLocation" x="438" y="642.5"/>
         </scene>
     </scenes>
 </document>

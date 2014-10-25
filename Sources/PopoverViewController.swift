@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  PopoverViewController.swift
 //  DetachablePopover
 //
 //  Created by Lukas Kubanek on 25.10.2014.
 //  Copyright (c) 2014 Lukas Kubanek. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
-class ViewController: NSViewController {
-
+class PopoverViewController: NSViewController {
+    
 }

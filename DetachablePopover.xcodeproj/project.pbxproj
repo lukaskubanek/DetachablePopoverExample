@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B8F19FBF0A70066AF71 /* AppDelegate.swift */; };
-		80989B9219FBF0A70066AF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B9119FBF0A70066AF71 /* ViewController.swift */; };
 		80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9319FBF0A70066AF71 /* Images.xcassets */; };
 		80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989BAF19FBF6A70066AF71 /* Main.storyboard */; };
+		80989BB319FBFCA80066AF71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB219FBFCA80066AF71 /* MainViewController.swift */; };
+		80989BB519FBFCC80066AF71 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB419FBFCC80066AF71 /* PopoverViewController.swift */; };
+		80989BB719FBFD1D0066AF71 /* CustomizablePopoverSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB619FBFD1D0066AF71 /* CustomizablePopoverSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80989B9119FBF0A70066AF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80989BB019FBF6A70066AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80989BB219FBFCA80066AF71 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		80989BB419FBFCC80066AF71 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		80989BB619FBFD1D0066AF71 /* CustomizablePopoverSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizablePopoverSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				80989B8F19FBF0A70066AF71 /* AppDelegate.swift */,
-				80989B9119FBF0A70066AF71 /* ViewController.swift */,
+				80989BB219FBFCA80066AF71 /* MainViewController.swift */,
+				80989BB419FBFCC80066AF71 /* PopoverViewController.swift */,
+				80989BB619FBFD1D0066AF71 /* CustomizablePopoverSegue.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80989B9219FBF0A70066AF71 /* ViewController.swift in Sources */,
 				80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */,
+				80989BB519FBFCC80066AF71 /* PopoverViewController.swift in Sources */,
+				80989BB319FBFCA80066AF71 /* MainViewController.swift in Sources */,
+				80989BB719FBFD1D0066AF71 /* CustomizablePopoverSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +257,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,6 +269,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

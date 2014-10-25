@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Lukas Kubanek. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
 
