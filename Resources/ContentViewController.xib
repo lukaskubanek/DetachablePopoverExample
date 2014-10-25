@@ -38,6 +38,7 @@
                 <constraint firstItem="MMP-vd-MCc" firstAttribute="top" secondItem="JnG-cl-jqe" secondAttribute="top" constant="80" id="oHG-OO-qQs"/>
                 <constraint firstAttribute="bottom" secondItem="w8H-3P-ltX" secondAttribute="bottom" constant="80" id="tr5-Ft-W7Z"/>
             </constraints>
+            <point key="canvasLocation" x="-317" y="-3.5"/>
         </view>
     </objects>
 </document>

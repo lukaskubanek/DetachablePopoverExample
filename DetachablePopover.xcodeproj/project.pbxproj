@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8044041819FC1606002FE65E /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8044041719FC1606002FE65E /* ContentViewController.xib */; };
+		8044041B19FC200B002FE65E /* DetachedWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8044041919FC200B002FE65E /* DetachedWindowController.swift */; };
+		8044041E19FC202E002FE65E /* DetachedWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8044041D19FC202E002FE65E /* DetachedWindowController.xib */; };
 		80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B8F19FBF0A70066AF71 /* AppDelegate.swift */; };
 		80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9319FBF0A70066AF71 /* Images.xcassets */; };
 		80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989BAF19FBF6A70066AF71 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		8044041719FC1606002FE65E /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		8044041919FC200B002FE65E /* DetachedWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachedWindowController.swift; sourceTree = "<group>"; };
+		8044041D19FC202E002FE65E /* DetachedWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetachedWindowController.xib; sourceTree = "<group>"; };
 		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 				80989B8F19FBF0A70066AF71 /* AppDelegate.swift */,
 				80989BB219FBFCA80066AF71 /* MainViewController.swift */,
 				80989BB419FBFCC80066AF71 /* ContentViewController.swift */,
+				8044041919FC200B002FE65E /* DetachedWindowController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -70,6 +75,7 @@
 			children = (
 				80989BAF19FBF6A70066AF71 /* Main.storyboard */,
 				8044041719FC1606002FE65E /* ContentViewController.xib */,
+				8044041D19FC202E002FE65E /* DetachedWindowController.xib */,
 				80989B9319FBF0A70066AF71 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -143,6 +149,7 @@
 				80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */,
 				80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */,
 				8044041819FC1606002FE65E /* ContentViewController.xib in Resources */,
+				8044041E19FC202E002FE65E /* DetachedWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +163,7 @@
 				80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */,
 				80989BB519FBFCC80066AF71 /* ContentViewController.swift in Sources */,
 				80989BB319FBFCA80066AF71 /* MainViewController.swift in Sources */,
+				8044041B19FC200B002FE65E /* DetachedWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

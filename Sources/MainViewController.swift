@@ -12,31 +12,43 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
+    @IBOutlet weak var windowTypeSelection: NSMatrix!
     @IBOutlet weak var showHideButton: NSButton!
     
     lazy var popover: NSPopover = {
         let popover = NSPopover()
         popover.behavior = .Semitransient
+        popover.contentViewController = ContentViewController(nibName: "ContentViewController", bundle: nil)!
         popover.delegate = self
         return popover
     }()
     
-    lazy var contentViewController: ContentViewController = {
-        return ContentViewController(nibName: "ContentViewController", bundle: nil)!
+    lazy var detachedWindowController: DetachedWindowController = {
+        let detachedWindowController = DetachedWindowController(windowNibName: "DetachedWindowController")
+        detachedWindowController.contentViewController = ContentViewController(nibName: "ContentViewController", bundle: nil)!
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "detachedWindowWillClose:", name: NSWindowWillCloseNotification, object: detachedWindowController.window)
+        
+        return detachedWindowController
     }()
     
     // MARK: - Interface Builder Actions
     
     @IBAction func showOrHide(sender: NSButton) {
-        if (popover.shown) {
+        let popoverVisible = popover.shown
+        let customDetachedWindowVisible = detachedWindowController.window!.visible
+        
+        if (popoverVisible) {
             popover.performClose(sender)
+        } else if (customDetachedWindowVisible) {
+            detachedWindowController.close()
         } else {
             popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
-            popover.contentViewController = contentViewController
             
             let positioningView = sender
             let positioningRect = NSZeroRect
             let preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
+            
             popover.showRelativeToRect(positioningRect, ofView: positioningView, preferredEdge: preferredEdge)
         }
     }
@@ -47,15 +59,36 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return true
     }
     
+    func detachableWindowForPopover(popover: NSPopover) -> NSWindow? {
+        return (windowTypeSelection.selectedRow == 1) ? detachedWindowController.window : nil
+    }
+    
     func popoverDidShow(notification: NSNotification) {
-        showHideButton.title = "Hide"
+        displayHide()
     }
     
     func popoverDidClose(notification: NSNotification) {
-        showHideButton.title = "Show"
+        let closeReason = notification.userInfo![NSPopoverCloseReasonKey] as String
+        if (closeReason == NSPopoverCloseReasonStandard) {
+            displayShow()
+        }
+    }
+    
+    // MARK: - Notifications Handling
+    
+    @objc func detachedWindowWillClose(notification: NSNotification) {
+        displayShow()
     }
     
     // MARK: - Helper Methods
+    
+    private func displayHide() {
+        showHideButton.title = "Hide"
+    }
+    
+    private func displayShow() {
+        showHideButton.title = "Show"
+    }
     
     private func appearanceForSelectedRadioButton(radioButton: Int) -> NSAppearance {
         switch radioButton {
@@ -74,6 +107,12 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         case 3: return NSMaxYEdge
         default: return preferredEdgeForSelectedRadioButton(0)
         }
+    }
+    
+    // MARK: - Deinitialization
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
 }

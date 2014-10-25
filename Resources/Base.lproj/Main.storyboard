@@ -669,13 +669,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="DetachablePopover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="290"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KP9-vo-dnk">
-                                <rect key="frame" x="119" y="154" width="181" height="58"/>
+                                <rect key="frame" x="122" y="212" width="185" height="58"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                <size key="cellSize" width="101" height="18"/>
+                                <size key="cellSize" width="185" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
                                 <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="bIy-hz-cQd">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -699,7 +699,7 @@
                                 </cells>
                             </matrix>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I1u-SV-bh8">
-                                <rect key="frame" x="18" y="195" width="83" height="17"/>
+                                <rect key="frame" x="18" y="253" width="91" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Appearance:" id="BAq-Wv-L1V">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -707,7 +707,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-Va-Fgy">
-                                <rect key="frame" x="18" y="122" width="83" height="17"/>
+                                <rect key="frame" x="18" y="180" width="91" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Position:" id="oIb-NK-dxc">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -715,7 +715,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cac-mV-M5P">
-                                <rect key="frame" x="229" y="13" width="77" height="32"/>
+                                <rect key="frame" x="236" y="13" width="77" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Ty0-bf-b08"/>
                                 </constraints>
@@ -728,9 +728,9 @@
                                 </connections>
                             </button>
                             <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-QX-ic8">
-                                <rect key="frame" x="119" y="61" width="181" height="78"/>
+                                <rect key="frame" x="122" y="119" width="185" height="78"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                <size key="cellSize" width="68" height="18"/>
+                                <size key="cellSize" width="185" height="18"/>
                                 <size key="intercellSpacing" width="4" height="2"/>
                                 <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Z1K-j5-GNi">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -757,12 +757,47 @@
                                     </column>
                                 </cells>
                             </matrix>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8cK-Bi-QVD">
+                                <rect key="frame" x="18" y="82" width="91" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Window Type:" id="c44-hH-M5n">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wky-yL-dqd">
+                                <rect key="frame" x="122" y="61" width="185" height="38"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <size key="cellSize" width="185" height="18"/>
+                                <size key="intercellSpacing" width="4" height="2"/>
+                                <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="CHa-tO-tty">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <cells>
+                                    <column>
+                                        <buttonCell type="radio" title="Default" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="UAY-WX-Qe8">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <buttonCell type="radio" title="Custom" imagePosition="left" alignment="left" inset="2" id="Lr0-Cb-vNQ">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </column>
+                                </cells>
+                            </matrix>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="wky-yL-dqd" firstAttribute="leading" secondItem="8cK-Bi-QVD" secondAttribute="trailing" constant="15" id="0lv-cB-o5m"/>
                             <constraint firstItem="KP9-vo-dnk" firstAttribute="width" secondItem="oD1-QX-ic8" secondAttribute="width" id="0r9-pC-Gzc"/>
-                            <constraint firstItem="oD1-QX-ic8" firstAttribute="leading" secondItem="EgA-Va-Fgy" secondAttribute="trailing" constant="20" id="5it-GD-Vsf"/>
-                            <constraint firstItem="KP9-vo-dnk" firstAttribute="leading" secondItem="I1u-SV-bh8" secondAttribute="trailing" constant="20" id="71z-mV-0Sm"/>
+                            <constraint firstItem="oD1-QX-ic8" firstAttribute="width" secondItem="wky-yL-dqd" secondAttribute="width" id="2If-pR-llY"/>
+                            <constraint firstItem="oD1-QX-ic8" firstAttribute="leading" secondItem="EgA-Va-Fgy" secondAttribute="trailing" constant="15" id="5it-GD-Vsf"/>
+                            <constraint firstItem="KP9-vo-dnk" firstAttribute="leading" secondItem="I1u-SV-bh8" secondAttribute="trailing" constant="15" id="71z-mV-0Sm"/>
+                            <constraint firstItem="8cK-Bi-QVD" firstAttribute="top" secondItem="wky-yL-dqd" secondAttribute="top" id="978-LK-BEf"/>
                             <constraint firstItem="I1u-SV-bh8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="GwY-LD-duf"/>
+                            <constraint firstAttribute="trailing" secondItem="wky-yL-dqd" secondAttribute="trailing" constant="20" id="QJS-UP-CoY"/>
+                            <constraint firstItem="8cK-Bi-QVD" firstAttribute="width" secondItem="EgA-Va-Fgy" secondAttribute="width" id="SgZ-vk-Chh"/>
                             <constraint firstAttribute="trailing" secondItem="cac-mV-M5P" secondAttribute="trailing" constant="20" id="Taf-aB-S9i"/>
                             <constraint firstItem="EgA-Va-Fgy" firstAttribute="width" secondItem="I1u-SV-bh8" secondAttribute="width" id="YAY-mf-dr9"/>
                             <constraint firstItem="EgA-Va-Fgy" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Z1L-XT-iIX"/>
@@ -770,21 +805,24 @@
                             <constraint firstItem="oD1-QX-ic8" firstAttribute="top" secondItem="KP9-vo-dnk" secondAttribute="bottom" constant="15" id="b7Q-Xx-I6B"/>
                             <constraint firstAttribute="trailing" secondItem="oD1-QX-ic8" secondAttribute="trailing" constant="20" id="eF0-W0-xgf"/>
                             <constraint firstAttribute="bottom" secondItem="cac-mV-M5P" secondAttribute="bottom" constant="20" id="eli-7K-elP"/>
+                            <constraint firstItem="wky-yL-dqd" firstAttribute="top" secondItem="oD1-QX-ic8" secondAttribute="bottom" constant="20" id="her-f5-uSx"/>
                             <constraint firstAttribute="trailing" secondItem="KP9-vo-dnk" secondAttribute="trailing" constant="20" id="ien-Fj-qir"/>
                             <constraint firstItem="EgA-Va-Fgy" firstAttribute="top" secondItem="KP9-vo-dnk" secondAttribute="bottom" constant="15" id="jQ5-ot-7Pt"/>
                             <constraint firstItem="I1u-SV-bh8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="k0J-B6-2B6"/>
-                            <constraint firstItem="cac-mV-M5P" firstAttribute="top" secondItem="oD1-QX-ic8" secondAttribute="bottom" constant="20" id="xM2-F1-6v0"/>
+                            <constraint firstItem="8cK-Bi-QVD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="sdU-1h-Quk"/>
+                            <constraint firstItem="cac-mV-M5P" firstAttribute="top" secondItem="wky-yL-dqd" secondAttribute="bottom" constant="20" id="v5h-Ha-H9m"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appearanceSelection" destination="KP9-vo-dnk" id="kw8-kf-EPY"/>
                         <outlet property="positionSelection" destination="oD1-QX-ic8" id="DCe-KA-AzW"/>
                         <outlet property="showHideButton" destination="cac-mV-M5P" id="8J3-xd-wp0"/>
+                        <outlet property="windowTypeSelection" destination="wky-yL-dqd" id="DRF-oV-CJn"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="643"/>
+            <point key="canvasLocation" x="-7.5" y="646"/>
         </scene>
     </scenes>
 </document>
