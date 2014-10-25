@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8044041819FC1606002FE65E /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8044041719FC1606002FE65E /* PopoverViewController.xib */; };
+		8044041819FC1606002FE65E /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8044041719FC1606002FE65E /* ContentViewController.xib */; };
 		80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B8F19FBF0A70066AF71 /* AppDelegate.swift */; };
 		80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9319FBF0A70066AF71 /* Images.xcassets */; };
 		80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989BAF19FBF6A70066AF71 /* Main.storyboard */; };
 		80989BB319FBFCA80066AF71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB219FBFCA80066AF71 /* MainViewController.swift */; };
-		80989BB519FBFCC80066AF71 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB419FBFCC80066AF71 /* PopoverViewController.swift */; };
+		80989BB519FBFCC80066AF71 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BB419FBFCC80066AF71 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8044041719FC1606002FE65E /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		8044041719FC1606002FE65E /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80989BB019FBF6A70066AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80989BB219FBFCA80066AF71 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		80989BB419FBFCC80066AF71 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		80989BB419FBFCC80066AF71 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				80989B8F19FBF0A70066AF71 /* AppDelegate.swift */,
 				80989BB219FBFCA80066AF71 /* MainViewController.swift */,
-				80989BB419FBFCC80066AF71 /* PopoverViewController.swift */,
+				80989BB419FBFCC80066AF71 /* ContentViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				80989BAF19FBF6A70066AF71 /* Main.storyboard */,
-				8044041719FC1606002FE65E /* PopoverViewController.xib */,
+				8044041719FC1606002FE65E /* ContentViewController.xib */,
 				80989B9319FBF0A70066AF71 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -142,7 +142,7 @@
 			files = (
 				80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */,
 				80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */,
-				8044041819FC1606002FE65E /* PopoverViewController.xib in Resources */,
+				8044041819FC1606002FE65E /* ContentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */,
-				80989BB519FBFCC80066AF71 /* PopoverViewController.swift in Sources */,
+				80989BB519FBFCC80066AF71 /* ContentViewController.swift in Sources */,
 				80989BB319FBFCA80066AF71 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

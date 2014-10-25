@@ -1,5 +1,5 @@
 //
-//  PopoverViewController.swift
+//  ContentViewController.swift
 //  DetachablePopover
 //
 //  Created by Lukas Kubanek on 25.10.2014.
@@ -8,6 +8,6 @@
 
 import AppKit
 
-class PopoverViewController: NSViewController {
+class ContentViewController: NSViewController {
     
 }

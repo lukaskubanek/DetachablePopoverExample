@@ -21,8 +21,8 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return popover
     }()
     
-    lazy var popoverViewController: PopoverViewController = {
-        return PopoverViewController(nibName: "PopoverView", bundle: nil)!
+    lazy var contentViewController: ContentViewController = {
+        return ContentViewController(nibName: "ContentViewController", bundle: nil)!
     }()
     
     // MARK: - Interface Builder Actions
@@ -32,7 +32,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
             popover.performClose(sender)
         } else {
             popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
-            popover.contentViewController = popoverViewController
+            popover.contentViewController = contentViewController
             
             let positioningView = sender
             let positioningRect = NSZeroRect
