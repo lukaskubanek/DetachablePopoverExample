@@ -13,7 +13,9 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
     @IBOutlet weak var windowTypeSelection: NSMatrix!
-    @IBOutlet weak var showHideButton: NSButton!
+    
+    @IBOutlet weak var showButton: NSButton!
+    @IBOutlet weak var hideButton: NSButton!
     
     lazy var popover: NSPopover = {
         let popover = NSPopover()
@@ -32,16 +34,19 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return detachedWindowController
     }()
     
+    var popoverVisible: Bool {
+        get { return popover.shown }
+    }
+    
+    var customDetachedWindowVisible : Bool {
+        get { return detachedWindowController.window!.visible }
+    }
+    
     // MARK: - Interface Builder Actions
     
-    @IBAction func showOrHide(sender: NSButton) {
-        let popoverVisible = popover.shown
-        let customDetachedWindowVisible = detachedWindowController.window!.visible
-        
-        if (popoverVisible) {
-            popover.performClose(sender)
-        } else if (customDetachedWindowVisible) {
-            detachedWindowController.close()
+    @IBAction func show(sender: NSButton) {
+        if (customDetachedWindowVisible) {
+            detachedWindowController.window?.makeKeyAndOrderFront(nil)
         } else {
             popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
             
@@ -50,6 +55,14 @@ class MainViewController: NSViewController, NSPopoverDelegate {
             let preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
             
             popover.showRelativeToRect(positioningRect, ofView: positioningView, preferredEdge: preferredEdge)
+        }
+    }
+    
+    @IBAction func hide(sender: NSButton) {
+        if (popoverVisible) {
+            popover.performClose(nil)
+        } else if (customDetachedWindowVisible) {
+            detachedWindowController.close()
         }
     }
     
@@ -64,30 +77,30 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     }
     
     func popoverDidShow(notification: NSNotification) {
-        displayHide()
+        enableHideButton()
     }
     
     func popoverDidClose(notification: NSNotification) {
         let closeReason = notification.userInfo![NSPopoverCloseReasonKey] as String
         if (closeReason == NSPopoverCloseReasonStandard) {
-            displayShow()
+            disableHideButton()
         }
     }
     
     // MARK: - Notifications Handling
     
     @objc func detachedWindowWillClose(notification: NSNotification) {
-        displayShow()
+        disableHideButton()
     }
     
     // MARK: - Helper Methods
     
-    private func displayHide() {
-        showHideButton.title = "Hide"
+    private func enableHideButton() {
+        hideButton.enabled = true
     }
     
-    private func displayShow() {
-        showHideButton.title = "Show"
+    private func disableHideButton() {
+        hideButton.enabled = false
     }
     
     private func appearanceForSelectedRadioButton(radioButton: Int) -> NSAppearance {
