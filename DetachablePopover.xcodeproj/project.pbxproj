@@ -10,19 +10,8 @@
 		80989B9019FBF0A70066AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B8F19FBF0A70066AF71 /* AppDelegate.swift */; };
 		80989B9219FBF0A70066AF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989B9119FBF0A70066AF71 /* ViewController.swift */; };
 		80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9319FBF0A70066AF71 /* Images.xcassets */; };
-		80989B9719FBF0A80066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989B9519FBF0A80066AF71 /* Main.storyboard */; };
-		80989BA319FBF0A80066AF71 /* DetachablePopoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */; };
+		80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80989BAF19FBF6A70066AF71 /* Main.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		80989B9D19FBF0A80066AF71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 80989B8219FBF0A70066AF71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 80989B8919FBF0A70066AF71;
-			remoteInfo = DetachablePopover;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,21 +19,11 @@
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80989B9119FBF0A70066AF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		80989B9619FBF0A80066AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetachablePopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		80989BA119FBF0A80066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachablePopoverTests.swift; sourceTree = "<group>"; };
+		80989BB019FBF6A70066AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		80989B8719FBF0A70066AF71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80989B9919FBF0A80066AF71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,8 +36,9 @@
 		80989B8119FBF0A70066AF71 = {
 			isa = PBXGroup;
 			children = (
-				80989B8C19FBF0A70066AF71 /* DetachablePopover */,
-				80989B9F19FBF0A80066AF71 /* DetachablePopoverTests */,
+				80989BAC19FBF1D70066AF71 /* Sources */,
+				80989BAD19FBF1DD0066AF71 /* Resources */,
+				80989BAE19FBF1E50066AF71 /* Supporting Files */,
 				80989B8B19FBF0A70066AF71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,46 +47,34 @@
 			isa = PBXGroup;
 			children = (
 				80989B8A19FBF0A70066AF71 /* DetachablePopover.app */,
-				80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80989B8C19FBF0A70066AF71 /* DetachablePopover */ = {
+		80989BAC19FBF1D70066AF71 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				80989B8F19FBF0A70066AF71 /* AppDelegate.swift */,
 				80989B9119FBF0A70066AF71 /* ViewController.swift */,
-				80989B9319FBF0A70066AF71 /* Images.xcassets */,
-				80989B9519FBF0A80066AF71 /* Main.storyboard */,
-				80989B8D19FBF0A70066AF71 /* Supporting Files */,
 			);
-			path = DetachablePopover;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		80989B8D19FBF0A70066AF71 /* Supporting Files */ = {
+		80989BAD19FBF1DD0066AF71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80989BAF19FBF6A70066AF71 /* Main.storyboard */,
+				80989B9319FBF0A70066AF71 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		80989BAE19FBF1E50066AF71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				80989B8E19FBF0A70066AF71 /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		80989B9F19FBF0A80066AF71 /* DetachablePopoverTests */ = {
-			isa = PBXGroup;
-			children = (
-				80989BA219FBF0A80066AF71 /* DetachablePopoverTests.swift */,
-				80989BA019FBF0A80066AF71 /* Supporting Files */,
-			);
-			path = DetachablePopoverTests;
-			sourceTree = "<group>";
-		};
-		80989BA019FBF0A80066AF71 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				80989BA119FBF0A80066AF71 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,24 +97,6 @@
 			productReference = 80989B8A19FBF0A70066AF71 /* DetachablePopover.app */;
 			productType = "com.apple.product-type.application";
 		};
-		80989B9B19FBF0A80066AF71 /* DetachablePopoverTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 80989BA919FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverTests" */;
-			buildPhases = (
-				80989B9819FBF0A80066AF71 /* Sources */,
-				80989B9919FBF0A80066AF71 /* Frameworks */,
-				80989B9A19FBF0A80066AF71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				80989B9E19FBF0A80066AF71 /* PBXTargetDependency */,
-			);
-			name = DetachablePopoverTests;
-			productName = DetachablePopoverTests;
-			productReference = 80989B9C19FBF0A80066AF71 /* DetachablePopoverTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,10 +108,6 @@
 				TargetAttributes = {
 					80989B8919FBF0A70066AF71 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					80989B9B19FBF0A80066AF71 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 80989B8919FBF0A70066AF71;
 					};
 				};
 			};
@@ -179,7 +125,6 @@
 			projectRoot = "";
 			targets = (
 				80989B8919FBF0A70066AF71 /* DetachablePopover */,
-				80989B9B19FBF0A80066AF71 /* DetachablePopoverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,14 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80989B9419FBF0A70066AF71 /* Images.xcassets in Resources */,
-				80989B9719FBF0A80066AF71 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80989B9A19FBF0A80066AF71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				80989BB119FBF6A70066AF71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,29 +151,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80989B9819FBF0A80066AF71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80989BA319FBF0A80066AF71 /* DetachablePopoverTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		80989B9E19FBF0A80066AF71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 80989B8919FBF0A70066AF71 /* DetachablePopover */;
-			targetProxy = 80989B9D19FBF0A80066AF71 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		80989B9519FBF0A80066AF71 /* Main.storyboard */ = {
+		80989BAF19FBF6A70066AF71 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				80989B9619FBF0A80066AF71 /* Base */,
+				80989BB019FBF6A70066AF71 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -325,7 +247,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = DetachablePopover/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -336,45 +258,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = DetachablePopover/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		80989BAA19FBF0A80066AF71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DetachablePopoverTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetachablePopover.app/Contents/MacOS/DetachablePopover";
-			};
-			name = Debug;
-		};
-		80989BAB19FBF0A80066AF71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DetachablePopoverTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetachablePopover.app/Contents/MacOS/DetachablePopover";
 			};
 			name = Release;
 		};
@@ -397,14 +283,7 @@
 				80989BA819FBF0A80066AF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		80989BA919FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				80989BAA19FBF0A80066AF71 /* Debug */,
-				80989BAB19FBF0A80066AF71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
