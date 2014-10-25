@@ -10,12 +10,16 @@ import AppKit
 
 class MainViewController: NSViewController, NSPopoverDelegate {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var appearanceSelection: NSMatrix!
     @IBOutlet weak var positionSelection: NSMatrix!
     @IBOutlet weak var windowTypeSelection: NSMatrix!
     
     @IBOutlet weak var showButton: NSButton!
     @IBOutlet weak var hideButton: NSButton!
+    
+    // MARK: - Popover and Detached Window Controller
     
     lazy var popover: NSPopover = {
         let popover = NSPopover()
@@ -25,24 +29,19 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return popover
     }()
     
+    private var detachedWindowControllerLoaded = false
+    
     lazy var detachedWindowController: DetachedWindowController = {
         let detachedWindowController = DetachedWindowController(windowNibName: "DetachedWindowController")
         detachedWindowController.contentViewController = ContentViewController(nibName: "ContentViewController", bundle: nil)!
         
+        self.detachedWindowControllerLoaded = true
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "detachedWindowWillClose:", name: NSWindowWillCloseNotification, object: detachedWindowController.window)
         
         return detachedWindowController
     }()
     
-    var popoverVisible: Bool {
-        get { return popover.shown }
-    }
-    
-    var customDetachedWindowVisible : Bool {
-        get { return detachedWindowController.window!.visible }
-    }
-    
-    // MARK: - Interface Builder Actions
+    // MARK: - Actions
     
     @IBAction func show(sender: NSButton) {
         if (customDetachedWindowVisible) {
@@ -93,7 +92,15 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         disableHideButton()
     }
     
-    // MARK: - Helper Methods
+    // MARK: - Helpers
+    
+    private var popoverVisible: Bool {
+        get { return popover.shown }
+    }
+    
+    private var customDetachedWindowVisible : Bool {
+        get { return detachedWindowControllerLoaded && detachedWindowController.window!.visible }
+    }
     
     private func enableHideButton() {
         hideButton.enabled = true
@@ -125,7 +132,9 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     // MARK: - Deinitialization
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        if (detachedWindowControllerLoaded) {
+            NSNotificationCenter.defaultCenter().removeObserver(self)
+        }
     }
     
 }
