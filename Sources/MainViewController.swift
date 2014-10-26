@@ -24,7 +24,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     lazy var popover: NSPopover = {
         let popover = NSPopover()
         popover.behavior = .Semitransient
-        popover.contentViewController = ContentViewController(nibName: "ContentViewController", bundle: nil)!
+        popover.contentViewController = ContentViewController()
         popover.delegate = self
         return popover
     }()
@@ -33,7 +33,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     lazy var detachedWindowController: DetachedWindowController = {
         let detachedWindowController = DetachedWindowController(windowNibName: "DetachedWindowController")
-        detachedWindowController.contentViewController = ContentViewController(nibName: "ContentViewController", bundle: nil)!
+        detachedWindowController.contentViewController = ContentViewController()
         
         self.detachedWindowControllerLoaded = true
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "detachedWindowWillClose:", name: NSWindowWillCloseNotification, object: detachedWindowController.window)

@@ -828,7 +828,6 @@
                         <outlet property="hideButton" destination="NZ2-Rj-S0K" id="hsS-Og-d6O"/>
                         <outlet property="positionSelection" destination="oD1-QX-ic8" id="DCe-KA-AzW"/>
                         <outlet property="showButton" destination="cac-mV-M5P" id="CUO-Bm-LWz"/>
-                        <outlet property="showHideButton" destination="cac-mV-M5P" id="8J3-xd-wp0"/>
                         <outlet property="windowTypeSelection" destination="wky-yL-dqd" id="DRF-oV-CJn"/>
                     </connections>
                 </viewController>
