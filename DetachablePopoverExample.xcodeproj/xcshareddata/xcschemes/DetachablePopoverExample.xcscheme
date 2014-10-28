@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "80989B8919FBF0A70066AF71"
-               BuildableName = "DetachablePopover.app"
-               BlueprintName = "DetachablePopover"
-               ReferencedContainer = "container:DetachablePopover.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "80989B9B19FBF0A80066AF71"
-               BuildableName = "DetachablePopoverTests.xctest"
-               BlueprintName = "DetachablePopoverTests"
-               ReferencedContainer = "container:DetachablePopover.xcodeproj">
+               BuildableName = "DetachablePopoverExample.app"
+               BlueprintName = "DetachablePopoverExample"
+               ReferencedContainer = "container:DetachablePopoverExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "80989B9B19FBF0A80066AF71"
-               BuildableName = "DetachablePopoverTests.xctest"
-               BlueprintName = "DetachablePopoverTests"
-               ReferencedContainer = "container:DetachablePopover.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80989B8919FBF0A70066AF71"
-            BuildableName = "DetachablePopover.app"
-            BlueprintName = "DetachablePopover"
-            ReferencedContainer = "container:DetachablePopover.xcodeproj">
+            BuildableName = "DetachablePopoverExample.app"
+            BlueprintName = "DetachablePopoverExample"
+            ReferencedContainer = "container:DetachablePopoverExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80989B8919FBF0A70066AF71"
-            BuildableName = "DetachablePopover.app"
-            BlueprintName = "DetachablePopover"
-            ReferencedContainer = "container:DetachablePopover.xcodeproj">
+            BuildableName = "DetachablePopoverExample.app"
+            BlueprintName = "DetachablePopoverExample"
+            ReferencedContainer = "container:DetachablePopoverExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80989B8919FBF0A70066AF71"
-            BuildableName = "DetachablePopover.app"
-            BlueprintName = "DetachablePopover"
-            ReferencedContainer = "container:DetachablePopover.xcodeproj">
+            BuildableName = "DetachablePopoverExample.app"
+            BlueprintName = "DetachablePopoverExample"
+            ReferencedContainer = "container:DetachablePopoverExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -21,7 +21,7 @@
 		8044041719FC1606002FE65E /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		8044041919FC200B002FE65E /* DetachedWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachedWindowController.swift; sourceTree = "<group>"; };
 		8044041D19FC202E002FE65E /* DetachedWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetachedWindowController.xib; sourceTree = "<group>"; };
-		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DetachablePopover.app; path = DetachablePopoverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		80989B8919FBF0A70066AF71 /* DetachablePopover */ = {
+		80989B8919FBF0A70066AF71 /* DetachablePopoverExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopover" */;
+			buildConfigurationList = 80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverExample" */;
 			buildPhases = (
 				80989B8619FBF0A70066AF71 /* Sources */,
 				80989B8719FBF0A70066AF71 /* Frameworks */,
@@ -104,7 +104,7 @@
 			);
 			dependencies = (
 			);
-			name = DetachablePopover;
+			name = DetachablePopoverExample;
 			productName = DetachablePopover;
 			productReference = 80989B8A19FBF0A70066AF71 /* DetachablePopover.app */;
 			productType = "com.apple.product-type.application";
@@ -123,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopover" */;
+			buildConfigurationList = 80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopoverExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -136,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80989B8919FBF0A70066AF71 /* DetachablePopover */,
+				80989B8919FBF0A70066AF71 /* DetachablePopoverExample */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopover" */ = {
+		80989B8519FBF0A70066AF71 /* Build configuration list for PBXProject "DetachablePopoverExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80989BA419FBF0A80066AF71 /* Debug */,
@@ -294,7 +294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopover" */ = {
+		80989BA619FBF0A80066AF71 /* Build configuration list for PBXNativeTarget "DetachablePopoverExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80989BA719FBF0A80066AF71 /* Debug */,
