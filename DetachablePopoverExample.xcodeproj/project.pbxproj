@@ -21,7 +21,7 @@
 		8044041719FC1606002FE65E /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		8044041919FC200B002FE65E /* DetachedWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachedWindowController.swift; sourceTree = "<group>"; };
 		8044041D19FC202E002FE65E /* DetachedWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetachedWindowController.xib; sourceTree = "<group>"; };
-		80989B8A19FBF0A70066AF71 /* DetachablePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DetachablePopover.app; path = DetachablePopoverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80989B8A19FBF0A70066AF71 /* DetachablePopoverExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetachablePopoverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80989B8E19FBF0A70066AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80989B8F19FBF0A70066AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80989B9319FBF0A70066AF71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		80989B8B19FBF0A70066AF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80989B8A19FBF0A70066AF71 /* DetachablePopover.app */,
+				80989B8A19FBF0A70066AF71 /* DetachablePopoverExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 			);
 			name = DetachablePopoverExample;
 			productName = DetachablePopover;
-			productReference = 80989B8A19FBF0A70066AF71 /* DetachablePopover.app */;
+			productReference = 80989B8A19FBF0A70066AF71 /* DetachablePopoverExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
