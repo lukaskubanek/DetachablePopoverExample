@@ -8,6 +8,8 @@ This example application shows the [new behavior](https://developer.apple.com/li
 
 **Custom detached windows:** Additionally, a custom detached window can be provided to `NSPopover`. In this case the content of the popover represented by the view controller is not moved to the new window and the developer has the responsibility to adjust the content of the custom window. Moreover the content view controller of the popover can't be directly reused for this purpose. The only possibility is to create a new instance.
 
-## Screenshot
+## Demo
 
-![Screenshot](Screenshot.png)
+The following video shows the discussed functionality of the example application:
+
+[![Video](Video.png)](https://vimeo.com/110764659)
