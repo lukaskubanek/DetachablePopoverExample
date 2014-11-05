@@ -115,7 +115,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         case 0: return NSAppearance(named: NSAppearanceNameAqua)!
         case 1: return NSAppearance(named: NSAppearanceNameVibrantDark)!
         case 2: return NSAppearance(named: NSAppearanceNameVibrantLight)!
-        default: return appearanceForSelectedRadioButton(0)
+        default: fatalError("Unsupported appearence selected")
         }
     }
     
@@ -125,7 +125,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         case 1: return NSMaxYEdge
         case 2: return NSMinXEdge
         case 3: return NSMinYEdge
-        default: return preferredEdgeForSelectedRadioButton(0)
+        default: fatalError("Unsupported preferred edge selected")
         }
     }
     
