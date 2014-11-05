@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ContentWindowController" customModule="DetachablePopover" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ContentWindowController" customModule="DetachablePopoverExample" customModuleProvider="target">
             <connections>
                 <outlet property="window" destination="uNh-b0-zaJ" id="sBs-ai-tQy"/>
             </connections>
