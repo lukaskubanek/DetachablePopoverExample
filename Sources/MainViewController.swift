@@ -80,7 +80,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     }
     
     func popoverDidClose(notification: NSNotification) {
-        let closeReason = notification.userInfo![NSPopoverCloseReasonKey] as String
+        let closeReason = notification.userInfo![NSPopoverCloseReasonKey] as! String
         if (closeReason == NSPopoverCloseReasonStandard) {
             disableHideButton()
         }
