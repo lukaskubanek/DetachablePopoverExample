@@ -121,10 +121,10 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     private func preferredEdgeForSelectedRadioButton(radioButton: Int) -> NSRectEdge {
         switch radioButton {
-        case 0: return NSMaxXEdge
-        case 1: return NSMaxYEdge
-        case 2: return NSMinXEdge
-        case 3: return NSMinYEdge
+        case 0: return .MaxX
+        case 1: return .MaxY
+        case 2: return .MinX
+        case 3: return .MinY
         default: fatalError("Unsupported preferred edge selected")
         }
     }
