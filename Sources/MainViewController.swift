@@ -23,7 +23,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     lazy var popover: NSPopover = {
         let popover = NSPopover()
-        popover.behavior = .Semitransient
+        popover.behavior = .semitransient
         popover.contentViewController = ContentViewController()
         popover.delegate = self
         return popover
@@ -32,11 +32,11 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     private var detachedWindowControllerLoaded = false
     
     lazy var detachedWindowController: DetachedWindowController = {
-        let detachedWindowController = DetachedWindowController(windowNibName: "DetachedWindowController")
+        let detachedWindowController = DetachedWindowController(windowNibName: NSNib.Name(rawValue: "DetachedWindowController"))
         detachedWindowController.contentViewController = ContentViewController()
         
         self.detachedWindowControllerLoaded = true
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "detachedWindowWillClose:", name: NSWindowWillCloseNotification, object: detachedWindowController.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(detachedWindowWillClose(notification:)), name: NSWindow.willCloseNotification, object: detachedWindowController.window)
         
         return detachedWindowController
     }()
@@ -47,13 +47,13 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         if (customDetachedWindowVisible) {
             detachedWindowController.window?.makeKeyAndOrderFront(nil)
         } else {
-            popover.appearance = appearanceForSelectedRadioButton(appearanceSelection.selectedRow)
+            popover.appearance = appearanceForSelectedRadioButton(radioButton: appearanceSelection.selectedRow)
             
             let positioningView = sender
             let positioningRect = NSZeroRect
-            let preferredEdge = preferredEdgeForSelectedRadioButton(positionSelection.selectedRow)
+            let preferredEdge = preferredEdgeForSelectedRadioButton(radioButton: positionSelection.selectedRow)
             
-            popover.showRelativeToRect(positioningRect, ofView: positioningView, preferredEdge: preferredEdge)
+            popover.show(relativeTo: positioningRect, of: positioningView, preferredEdge: preferredEdge)
         }
     }
     
@@ -67,7 +67,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     // MARK: - Popover Delegate
     
-    func popoverShouldDetach(popover: NSPopover) -> Bool {
+    func popoverShouldDetach(_ popover: NSPopover) -> Bool {
         return true
     }
     
@@ -75,13 +75,13 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return (windowTypeSelection.selectedRow == 1) ? detachedWindowController.window : nil
     }
     
-    func popoverDidShow(notification: NSNotification) {
+    func popoverDidShow(_ notification: Notification) {
         enableHideButton()
     }
     
-    func popoverDidClose(notification: NSNotification) {
-        let closeReason = notification.userInfo![NSPopoverCloseReasonKey] as! String
-        if (closeReason == NSPopoverCloseReasonStandard) {
+    func popoverDidClose(_ notification: Notification) {
+        let closeReason = notification.userInfo![NSPopover.closeReasonUserInfoKey] as! String
+        if (closeReason == NSPopover.CloseReason.standard.rawValue) {
             disableHideButton()
         }
     }
@@ -95,36 +95,36 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     // MARK: - Helpers
     
     private var popoverVisible: Bool {
-        get { return popover.shown }
+        get { return popover.isShown }
     }
     
     private var customDetachedWindowVisible : Bool {
-        get { return detachedWindowControllerLoaded && detachedWindowController.window!.visible }
+        get { return detachedWindowControllerLoaded && detachedWindowController.window!.isVisible }
     }
     
     private func enableHideButton() {
-        hideButton.enabled = true
+        hideButton.isEnabled = true
     }
     
     private func disableHideButton() {
-        hideButton.enabled = false
+        hideButton.isEnabled = false
     }
     
     private func appearanceForSelectedRadioButton(radioButton: Int) -> NSAppearance {
         switch radioButton {
-        case 0: return NSAppearance(named: NSAppearanceNameAqua)!
-        case 1: return NSAppearance(named: NSAppearanceNameVibrantDark)!
-        case 2: return NSAppearance(named: NSAppearanceNameVibrantLight)!
+        case 0: return NSAppearance(named: NSAppearance.Name.aqua)!
+        case 1: return NSAppearance(named: NSAppearance.Name.vibrantDark)!
+        case 2: return NSAppearance(named: NSAppearance.Name.vibrantLight)!
         default: fatalError("Unsupported appearence selected")
         }
     }
     
     private func preferredEdgeForSelectedRadioButton(radioButton: Int) -> NSRectEdge {
         switch radioButton {
-        case 0: return .MaxX
-        case 1: return .MaxY
-        case 2: return .MinX
-        case 3: return .MinY
+        case 0: return .maxX
+        case 1: return .maxY
+        case 2: return .minX
+        case 3: return .minY
         default: fatalError("Unsupported preferred edge selected")
         }
     }
@@ -133,7 +133,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     deinit {
         if (detachedWindowControllerLoaded) {
-            NSNotificationCenter.defaultCenter().removeObserver(self)
+            NotificationCenter.default.removeObserver(self)
         }
     }
     
