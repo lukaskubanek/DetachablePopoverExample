@@ -8,6 +8,6 @@
 
 import AppKit
 
-@objc(ContentViewController) class ContentViewController: NSViewController {
+class ContentViewController: NSViewController {
     
 }
