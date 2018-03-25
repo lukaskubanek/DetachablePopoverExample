@@ -71,7 +71,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         return true
     }
     
-    func detachableWindowForPopover(popover: NSPopover) -> NSWindow? {
+    func detachableWindow(for popover: NSPopover) -> NSWindow? {
         return (windowTypeSelection.selectedRow == 1) ? detachedWindowController.window : nil
     }
     
