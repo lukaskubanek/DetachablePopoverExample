@@ -69,7 +69,6 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     @IBAction func detach(_ sender: NSButton) {
         let window = detachableWindow(for: popover)
         window?.windowController?.showWindow(self)
-        disableDetachButton()
     }
     
     // MARK: - Popover Delegate
@@ -79,6 +78,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     }
     
     func detachableWindow(for popover: NSPopover) -> NSWindow? {
+        disableDetachButton()
         return customWindowSelected ? detachedWindowController.window : nil
     }
     
