@@ -18,6 +18,7 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     
     @IBOutlet weak var showButton: NSButton!
     @IBOutlet weak var hideButton: NSButton!
+    @IBOutlet weak var detachButton: NSButton!
     
     // MARK: - Popover and Detached Window Controller
     
@@ -65,6 +66,11 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         }
     }
     
+    @IBAction func detach(_ sender: NSButton) {
+        let window = detachableWindow(for: popover)
+        window?.windowController?.showWindow(self)
+    }
+    
     // MARK: - Popover Delegate
     
     func popoverShouldDetach(_ popover: NSPopover) -> Bool {
@@ -72,17 +78,22 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     }
     
     func detachableWindow(for popover: NSPopover) -> NSWindow? {
-        return (windowTypeSelection.selectedRow == 1) ? detachedWindowController.window : nil
+        disableDetachButton()
+        return customWindowSelected ? detachedWindowController.window : nil
     }
     
     func popoverDidShow(_ notification: Notification) {
         enableHideButton()
+        if customWindowSelected {
+            enableDetachButton()
+        }
     }
     
     func popoverDidClose(_ notification: Notification) {
         let closeReason = notification.userInfo![NSPopover.closeReasonUserInfoKey] as! String
         if (closeReason == NSPopover.CloseReason.standard.rawValue) {
             disableHideButton()
+            disableDetachButton()
         }
     }
     
@@ -102,6 +113,10 @@ class MainViewController: NSViewController, NSPopoverDelegate {
         get { return detachedWindowControllerLoaded && detachedWindowController.window!.isVisible }
     }
     
+    private var customWindowSelected : Bool {
+        get { return (windowTypeSelection.selectedRow == 1) }
+    }
+
     private func enableHideButton() {
         hideButton.isEnabled = true
     }
@@ -109,6 +124,15 @@ class MainViewController: NSViewController, NSPopoverDelegate {
     private func disableHideButton() {
         hideButton.isEnabled = false
     }
+    
+    private func enableDetachButton() {
+        detachButton.isEnabled = true
+    }
+    
+    private func disableDetachButton() {
+        detachButton.isEnabled = false
+    }
+    
     
     private func appearanceForSelectedRadioButton(radioButton: Int) -> NSAppearance {
         switch radioButton {
